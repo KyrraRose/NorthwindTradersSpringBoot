@@ -46,10 +46,10 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product:" +
-                "\n\tProduct ID:'" + productId + '\'' +
-                "\n\tProduct Name:'" + name + '\'' +
-                "\n\tCategory:'" + category + '\'' +
-                "\n\tPrice:'$" + price + '\'';
+        return String.format("%-4d | %-35s %-15s $%-7.2f%n",
+                productId,
+                name,
+                category,
+                price);
     }
 }

@@ -34,13 +34,26 @@ public class NorthwindApplication implements CommandLineRunner {
                     "Exit")), "Main Menu");
 
             switch (getUserInt("Type Here: ")) {
-                case 1 -> productDao.getAll().stream().forEach(System.out::println);
-                case 2 -> productDao.add(productDao.makeProduct());
-                case 3 -> productDao.getByProductName().stream().forEach(System.out::println);
-                case 4 -> System.out.println(productDao.getByProductID());
-                case 5 -> productDao.getByCategory().stream().forEach(System.out::println);
-                case 6 -> productDao.getByPrice().stream().forEach(System.out::println);
-                case 7 -> productDao.delete();
+                case 1 -> {System.out.println("\n-------------\nAll Products -------------------");
+                    productDao.getAll().stream().forEach(System.out::println);}
+                case 2 -> {System.out.println("\n-------------\nAdd Products -------------------");
+                    productDao.add(productDao.makeProduct());
+                }
+                case 3 -> {System.out.println("-------------\n\nProducts Found -----------------");
+                    productDao.getByProductName().stream().forEach(System.out::println);
+                }
+                case 4 -> {System.out.println("-------------\n\nProduct Found ------------------");
+                    System.out.println(productDao.getByProductID());
+                }
+                case 5 -> {System.out.println("-------------\n\nProducts Found -----------------");
+                    productDao.getByCategory().stream().forEach(System.out::println);
+                }
+                case 6 -> {System.out.println("-------------\n\nProducts Found -----------------");
+                    productDao.getByPrice().stream().forEach(System.out::println);
+                }
+                case 7 -> {System.out.println("-------------\n\nDelete Product -----------------");
+                    productDao.delete();
+                }
                 case 0 -> {System.out.println("Exiting."); System.exit(0);}
             }
         }
