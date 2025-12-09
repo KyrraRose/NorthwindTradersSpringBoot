@@ -1,5 +1,6 @@
 package com.pluralsight.NorthwindTradersSpringBoot;
 
+import com.pluralsight.NorthwindTradersSpringBoot.dao.ProductDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -7,7 +8,7 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import static com.pluralsight.NorthwindTradersSpringBoot.Utility.*;
+import static com.pluralsight.NorthwindTradersSpringBoot.util.Utility.*;
 
 @Component
 public class NorthwindApplication implements CommandLineRunner {

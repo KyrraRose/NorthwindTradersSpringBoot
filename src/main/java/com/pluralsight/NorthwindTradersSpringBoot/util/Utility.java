@@ -1,4 +1,4 @@
-package com.pluralsight.NorthwindTradersSpringBoot;
+package com.pluralsight.NorthwindTradersSpringBoot.util;
 
 import java.util.ArrayList;
 import java.util.Scanner;
