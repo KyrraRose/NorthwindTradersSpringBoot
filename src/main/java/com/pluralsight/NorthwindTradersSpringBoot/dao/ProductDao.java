@@ -10,9 +10,9 @@ public interface ProductDao {
 
     public List<Product> getAll();
 
-    public List<Product> getByProductName(String name);
-    public List<Product> getByCategory(String category);
-    public List<Product> getByPrice(double price);
+    public List<Product> getByProductName();
+    public List<Product> getByCategory();
+    public List<Product> getByPrice();
     public Product getByProductID();
     public void delete();
 
