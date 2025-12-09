@@ -29,10 +29,12 @@ public class Utility {
     }
     public static void displayMenu(ArrayList<String> options,String label){
         int i = 1;
-        System.out.println(label);
+        System.out.println("\n\n\n"+label);
         for (String s : options){
-            System.out.printf("[%d] %s%n",i,s);
-            i++;
+            if (s.equals("Exit")){System.out.printf("[%d] %s%n",0,s);}else{
+                System.out.printf("[%d] %s%n",i,s);
+                i++;
+            }
         }
     }
 

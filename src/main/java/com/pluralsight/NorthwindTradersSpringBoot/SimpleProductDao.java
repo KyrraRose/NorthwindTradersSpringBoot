@@ -5,6 +5,8 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.pluralsight.NorthwindTradersSpringBoot.Utility.*;
+
 @Component //bean
 public class SimpleProductDao implements ProductDao {
     private List<Product> products;
@@ -23,6 +25,15 @@ public class SimpleProductDao implements ProductDao {
     @Override
     public void add(Product product) {
         this.products.add(product);
+    }
+
+    @Override
+    public Product makeProduct(){
+        return new Product(
+                getUserInt("ID: "),
+                getUserString("Product Name: "),
+                getUserString("Category: "),
+                getUserDouble("Price: "));
     }
 
     @Override
